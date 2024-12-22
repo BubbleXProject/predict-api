@@ -1,0 +1,18 @@
+# Specify the Node.js version. For example: nodejs18, etc.
+runtime: nodejs18
+
+# Set any environment variables your app needs
+env_variables:
+  MODEL_URL: https://storage.googleapis.com/model-predict-api/model.json
+  PROJECT_ID: submissionmlgc-rifky
+  FIRESTORE_COLLECTION: predictions
+
+# Set service account credentials
+service_account: key-firebase@submissionmlgc-rifky-445502.iam.gserviceaccount.com
+#your-service-account@your-project-id.iam.gserviceaccount.com
+
+# Set the path to your app's main module
+handlers:
+  # Serve the app's main module
+  - url: /.*
+    script: auto
